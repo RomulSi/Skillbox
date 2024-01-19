@@ -1,9 +1,13 @@
-def sea_sick(sea):
-    sea_list = list(sea)
-    counter = 0
-    for i in range(len(sea_list)-1):
-        if sea_list[i] != sea_list[i + 1]:
-            counter += 1
-    percentage = counter / len(sea_list) * 100
-    return "Throw Up" if percentage > 20 else "No Problem"
+def count_positives_sum_negatives(arr):
+    if arr:
+        l = [0,0]
+        for x in arr:
+            if x >= 1:
+                l[0] += 1
+            else:
+                l[1] += x
+        return l
+    else:
+        return []
 
+print( count_positives_sum_negatives([]))
